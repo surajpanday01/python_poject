@@ -74,20 +74,20 @@ def toplevel_data(title,button_text,command):
     dobEntry = Entry(screen, font=('roman', 15, 'bold'), width=24)
     dobEntry.grid(row=6, column=1, pady=15, padx=10)
 
-    button_text = ttk.Button(screen,text='button_text',command=command)
+    button_text = ttk.Button(screen,text=button_text,command=command)
     button_text.grid(row=7, columnspan=2, pady=15)
     if title=='Update Student':
         indexing = studentTable.focus()
 
-        content = studentTable.item(indexing)
-        listdata = content['values']
-        idEntry.insert(0,listdata[0])
-        nameEntry.insert(0,listdata[1])
-        phoneEntry.insert(0,listdata[2])
-        emailEntry.insert(0,listdata[3])
-        addressEntry.insert(0,listdata[4])
-        genderEntry.insert(0,listdata[5])
-        dobEntry.insert(0,listdata[6])
+    content = studentTable.item(indexing)
+    listdata = content['values']
+    idEntry.insert(0,listdata[0])
+    nameEntry.insert(0,listdata[1])
+    phoneEntry.insert(0,listdata[2])
+    emailEntry.insert(0,listdata[3])
+    addressEntry.insert(0,listdata[4])
+    genderEntry.insert(0,listdata[5])
+    dobEntry.insert(0,listdata[6])
 
 
 def update_data():
